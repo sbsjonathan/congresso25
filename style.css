@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+/* 
+   A variável principal agora é --tamanho-topico.
+   O script.js muda esse valor (ex.: 18, 19, 20...).
+   Todos os elementos usam essa variável em um fator.
+*/
+:root {
+    --tamanho-topico: 18;      /* valor inicial em px */
+    --highlight-color: #E07030;
+    --biblia-color: #0055AA;
+    --text-gray: #666666;
+}
+
+/* Corpo geral */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 10px;
+    padding: 0;
+    line-height: 1.6;
+    /*
+       Se quiser que o texto normal do body também cresça/diminua,
+       pode definir aqui algo como:
+       font-size: calc(var(--tamanho-topico) * 1.0);
+    */
+}
+
+/* Título (h1 ~ 29px quando base = 18 => fator ~1.61) */
+h1 {
+    font-size: calc(var(--tamanho-topico) * 1.61);
+    font-weight: 900;
+    text-align: left;
+    margin-bottom: 6px;
+    color: var(--highlight-color);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* h2 ~ 19px => fator ~1.06 */
+h2 {
+    font-size: calc(var(--tamanho-topico) * 1.06);
+    font-weight: 100;
+    text-align: left;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    margin-top: 9px;
+    line-height: 1.2;
+}
+
+/* Referências bíblicas em azul */
+.biblia {
+    color: var(--biblia-color);
+}
+
+/* h3 ~ 25px => fator ~1.39 */
+h3 {
+    font-size: calc(var(--tamanho-topico) * 1.39);
+    text-align: left;
+    color: var(--highlight-color);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Container principal */
+.container {
+    max-width: 100%;
+    margin: 0 10px;
+    padding: 0;
+}
+
+/* Lista principal (schedule) */
+.schedule {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Cada li ~ 18px =>(AQUI MUDA A FONTE DO TOPICO) */
+.schedule li {
+    font-size: calc(var(--tamanho-topico) * 0.9);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Destaque no horário e em texto que usa .caixa-alta */
+.schedule li strong,
+.schedule li .caixa-alta {
+    color: var(--highlight-color);
+}
+
+/* Classe para forçar maiúsculas e cor de destaque, se desejado fora de .schedule */
+.caixa-alta {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+
+/* BULLETS */
+.series-discursos li {
+  list-style: none;       /* Remove o bullet padrão */
+  position: relative;     /* Necessário para posicionar o ::before */
+  padding-left: 0.7em;      /* Espaço para o bullet */
+  margin-left: -0.8em;
+}
+
+.series-discursos li::before {
+  content: "•";                    /* Define o bullet */
+  position: absolute;
+  left: 0;                         /* Alinha à esquerda */
+  top: 0;                        
+  font-size: 1.0em;                /* Ajuste o tamanho do bullet conforme necessário */
+  color: #000;   /* Usa a cor de destaque */
+}
+
+.banner-topo-wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+}
+
+.banner-topo {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}

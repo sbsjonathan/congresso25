@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Programação - Domingo</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body data-dia="domingo">
+
+    <div class="banner-topo-wrapper">
+        <img src="imagens/dom1.jpg" alt="Imagem de Domingo" class="banner-topo">
+    </div>
+
+    <div class="container">
+        <h1 id="toggle-menu">Domingo</h1>
+
+        <div class="menu-container" id="menu-container">
+            <label for="color-picker">Cor do tema:</label>
+            <input type="color" id="color-picker" value="#000000">
+            <button id="font-decrease">A-</button>
+            <button id="font-increase">A+</button>
+            <button id="clear-cache">Limpar Cache</button>
+        </div>
+
+        <h2>“Adorarão o Pai com espírito e verdade” — <span class="biblia">João 4:23</span></h2>
+
+        <h3>Manhã</h3>
+        <ul class="schedule">
+            <li><strong>9:20</strong> Vídeo musical</li>
+            <li><strong>9:30</strong> Cântico 140 e oração</li>
+
+            <li>
+                <strong>9:40 SÉRIE DE DISCURSOS:</strong> Lições das palavras de Jesus
+                <ul class="series-discursos">
+                    <li>
+                        <div class="clickable" data-textarea="nascer">
+                            ‘Nascer da água e do espírito’ <span class="biblia">(João 3:3, 5)</span>
+                        </div>
+                        <textarea id="nascer" wrap="soft"></textarea>
+                    </li>
+                    <li>
+                        <div class="clickable" data-textarea="ceu">
+                            “Nenhum homem subiu ao céu” <span class="biblia">(João 3:13)</span>
+                        </div>
+                        <textarea id="ceu" wrap="soft"></textarea>
+                    </li>
+                    <li>
+                        <div class="clickable" data-textarea="luz">
+                            ‘Chegue-se à luz’ <span class="biblia">(João 3:19-21)</span>
+                        </div>
+                        <textarea id="luz" wrap="soft"></textarea>
+                    </li>
+                    <li>
+                        <div class="clickable" data-textarea="eusouele">
+                            ‘Eu sou ele’ <span class="biblia">(João 4:25, 26)</span>
+                        </div>
+                        <textarea id="eusouele" wrap="soft"></textarea>
+                    </li>
+                    <li>
+                        <div class="clickable" data-textarea="alimento">
+                            “Meu alimento” <span class="biblia">(João 4:34)</span>
+                        </div>
+                        <textarea id="alimento" wrap="soft"></textarea>
+                    </li>
+                    <li>
+                        <div class="clickable" data-textarea="colheita">
+                            ‘Os campos estão brancos para a colheita’ <span class="biblia">(João 4:35)</span>
+                        </div>
+                        <textarea id="colheita" wrap="soft"></textarea>
+                    </li>
+                </ul>
+            </li>
+
+            <li><strong>11:05</strong> Cântico 37 e anúncios</li>
+
+            <li>
+                <div class="clickable" data-textarea="textarea1115">
+                    <strong>11:15 DISCURSO PARA O PÚBLICO:</strong> Você adora o que conhece? <span class="biblia">(João 4:20-24)</span>
+                </div>
+                <textarea id="textarea1115" wrap="soft"></textarea>
+            </li>
+
+            <li>
+                <div class="clickable" data-textarea="textarea1145">
+                    <strong>11:45</strong> Resumo de A Sentinela
+                </div>
+                <textarea id="textarea1145" wrap="soft"></textarea>
+            </li>
+
+            <li><strong>12:15</strong> Cântico 84 e intervalo</li>
+        </ul>
+
+        <h3>Tarde</h3>
+        <ul class="schedule">
+            <li><strong>1:35</strong> Vídeo musical</li>
+            <li><strong>1:45</strong> Cântico 77</li>
+
+            <li>
+                <div class="clickable" data-textarea="textarea150">
+                    <strong>1:50 VÍDEO PRINCIPAL:</strong> A História e o Ministério de Jesus: Episódio 3 — ‘Eu Sou Ele’
+                    <span class="biblia">(João 3:1–4:54; Mateus 4:12-20; Marcos 1:19, 20; Lucas 4:16–5:11)</span>
+                </div>
+                <textarea id="textarea150" wrap="soft"></textarea>
+            </li>
+
+            <li><strong>2:35</strong> Cântico 20 e anúncios</li>
+
+            <li>
+                <div class="clickable" data-textarea="textarea245">
+                    <strong>2:45</strong> O que você aprendeu?
+                </div>
+                <textarea id="textarea245" wrap="soft"></textarea>
+            </li>
+
+            <li>
+                <div class="clickable" data-textarea="textarea255">
+                    <strong>2:55</strong> Continue no grande templo espiritual de Jeová! <span class="biblia">(Hebreus 10:21-25; 13:15, 16; 1 Pedro 1:14-16; 2:21)</span>
+                </div>
+                <textarea id="textarea255" wrap="soft"></textarea>
+            </li>
+
+            <li><strong>3:45</strong> Novo cântico e oração final</li>
+        </ul>
+
+        <div class="divisoria-superior"></div>
+
+        <div class="nav-container">
+            <a href="sabado.html" class="nav-btn anterior">
+                <svg width="24" height="24" viewBox="0 0 300 300">
+                    <path d="M40 150 L120 80 M40 150 L120 220"
+                          stroke="white" stroke-width="15" fill="none" stroke-linecap="round"/>
+                </svg>
+                Anterior
+            </a>
+            <span class="nav-btn proximo desativado">
+                Próximo
+                <svg width="24" height="24" viewBox="0 0 300 300">
+                    <path d="M260 150 L180 80 M260 150 L180 220"
+                          stroke="#ccc" stroke-width="15" fill="none" stroke-linecap="round"/>
+                </svg>
+            </span>
+        </div>
+
+        <div class="divisoria-inferior"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

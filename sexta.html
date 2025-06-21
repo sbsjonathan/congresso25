@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Programação - Sexta-feira</title>
+
+  <!-- Importação dos estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+</head>
+<body data-dia="sexta">
+<div class="banner-topo-wrapper">
+    <img src="imagens/sex1.jpeg" alt="Imagem de Sexta-feira" class="banner-topo">
+</div>
+
+<div class="container">
+  <h1 id="toggle-menu">Sexta-feira</h1>
+
+  <div class="menu-container" id="menu-container">
+    <label for="color-picker">Cor do tema:</label>
+    <input type="color" id="color-picker" value="#000000">
+    <button id="font-decrease">A-</button>
+    <button id="font-increase">A+</button>
+    <button id="clear-cache">Limpar Cache</button>
+  </div>
+
+  <h2>“Adore a Jeová, seu Deus” — <span class="biblia">Mateus 4:10</span></h2>
+
+  <h3>Manhã</h3>
+  <ul class="schedule">
+    <li><div class="topico"><span class="texto"><strong>9:20</strong> Vídeo musical</span></div></li>
+    <li><div class="topico"><span class="texto"><strong>9:30</strong> Cântico 74 e oração</span></div></li>
+    <li>
+      <div class="clickable" data-textarea="textarea940">
+        <strong>9:40</strong><span class="caixa-alta"> DISCURSO DE ABERTURA:</span> O que é adoração pura? <span class="biblia">(Isaías 48:17; Malaquias 3:16)</span>
+      </div>
+      <textarea id="textarea940" wrap="soft"></textarea>
+    </li>
+    <li>
+      <div class="clickable" data-textarea="textarea1010">
+        <strong>10:10</strong><span class="caixa-alta"> VÍDEO PRINCIPAL:</span> A História e o Ministério de Jesus: Episódio 2 — “Este É Meu Filho” — Parte I <span class="biblia">(Mateus 3:1–4:11; Marcos 1:12,13; Lucas 3:1–4:7; João 1:7,8)</span>
+      </div>
+      <textarea id="textarea1010" wrap="soft"></textarea>
+    </li>
+    <li><div class="topico"><span class="texto"><strong>10:40</strong> Cântico 122 e anúncios</span></div></li>
+    <li>
+      <strong>10:50</strong><span class="caixa-alta"> SÉRIE DE DISCURSOS:</span> As profecias sobre o Messias se cumpriram! — Parte I
+      <ul class="series-discursos">
+        <li><div class="clickable" data-textarea="reconhecido"><span class="texto">Reconhecido por Deus</span> <span class="biblia">(Salmo 2:7; Mateus 3:16,17; Atos 13:33,34)</span></div><textarea id="reconhecido" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="davi"><span class="texto">Era descendente do rei Davi</span> <span class="biblia">(2 Samuel 7:12,13; Mateus 1:1,2,6)</span></div><textarea id="davi" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="ungido"><span class="texto">Ungido como “Messias, o Líder”</span> <span class="biblia">(Daniel 9:25; Lucas 3:1,2,21-23)</span></div><textarea id="ungido" wrap="soft"></textarea></li>
+      </ul>
+    </li>
+    <li><div class="clickable" data-textarea="textarea1145"><strong>11:45</strong> Quem realmente governa o mundo? <span class="biblia">(Marcos 12:17; Lucas 4:5-8; João 18:36)</span></div><textarea id="textarea1145" wrap="soft"></textarea></li>
+    <li><div class="topico"><span class="texto"><strong>12:15</strong> Cântico 22 e intervalo</span></div></li>
+  </ul>
+
+  <h3>Tarde</h3>
+  <ul class="schedule">
+    <li><div class="topico"><span class="texto"><strong>13:35</strong> Vídeo musical</span></div></li>
+    <li><div class="topico"><span class="texto"><strong>13:45</strong> Cântico 121</span></div></li>
+    <li>
+      <strong>13:50</strong><span class="caixa-alta"> SÉRIE DE DISCURSOS:</span> Imite as respostas que Jesus deu ao Tentador!
+      <ul class="series-discursos">
+        <li><div class="clickable" data-textarea="palavra"><span class="texto">Viva da Palavra de Jeová</span> <span class="biblia">(Mateus 4:1-4)</span></div><textarea id="palavra" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="prova"><span class="texto">Não ponha Jeová à prova</span> <span class="biblia">(Mateus 4:5-7)</span></div><textarea id="prova" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="adoracao"><span class="texto">Adore apenas a Jeová</span> <span class="biblia">(Mateus 4:10; Lucas 4:5-7)</span></div><textarea id="adoracao" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="verdade"><span class="texto">Defenda a verdade</span> <span class="biblia">(1 Pedro 3:15)</span></div><textarea id="verdade" wrap="soft"></textarea></li>
+      </ul>
+    </li>
+    <li><div class="topico"><span class="texto"><strong>14:50</strong> Cântico 97 e anúncios</span></div></li>
+    <li>
+      <strong>15:00</strong><span class="caixa-alta"> SÉRIE DE DISCURSOS:</span> Lições da terra de Jesus
+      <ul class="series-discursos">
+        <li><div class="clickable" data-textarea="deserto"><span class="texto">O deserto da Judeia</span> <span class="biblia">(Mateus 3:1-4; Lucas 4:1)</span></div><textarea id="deserto" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="jordao"><span class="texto">O vale do Jordão</span> <span class="biblia">(Mateus 3:13-15; João 1:27,30)</span></div><textarea id="jordao" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="jerusalem"><span class="texto">Jerusalém</span> <span class="biblia">(Mateus 23:37,38)</span></div><textarea id="jerusalem" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="samaria"><span class="texto">Samaria</span> <span class="biblia">(João 4:7-9, 40-42)</span></div><textarea id="samaria" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="galileia"><span class="texto">Galileia</span> <span class="biblia">(Mateus 13:54-57)</span></div><textarea id="galileia" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="fenicia"><span class="texto">Fenícia</span> <span class="biblia">(Lucas 4:25,26)</span></div><textarea id="fenicia" wrap="soft"></textarea></li>
+        <li><div class="clickable" data-textarea="siria"><span class="texto">Síria</span> <span class="biblia">(Lucas 4:27)</span></div><textarea id="siria" wrap="soft"></textarea></li>
+      </ul>
+    </li>
+    <li><div class="clickable" data-textarea="textarea1610"><strong>16:10</strong> O que Jesus vê em você? <span class="biblia">(João 2:25)</span></div><textarea id="textarea1610" wrap="soft"></textarea></li>
+    <li><div class="topico"><span class="texto"><strong>16:45</strong> Cântico 34 e oração final</span></div></li>
+  </ul>
+
+  <div class="divisoria-superior"></div>
+
+  <div class="nav-container">
+    <a href="index.html" class="nav-btn anterior">
+      <svg width="24" height="24" viewBox="0 0 300 300">
+        <path d="M40 150 L120 80 M40 150 L120 220" stroke="white" stroke-width="15" fill="none" stroke-linecap="round"/>
+      </svg>
+      Anterior
+    </a>
+    <a href="sabado.html" class="nav-btn proximo">
+      Próximo
+      <svg width="24" height="24" viewBox="0 0 300 300">
+        <path d="M260 150 L180 80 M260 150 L180 220" stroke="white" stroke-width="15" fill="none" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="divisoria-inferior"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

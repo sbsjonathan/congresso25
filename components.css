@@ -1,0 +1,180 @@
+/* ================================
+   🔹 LINHAS DIVISÓRIAS PERSONALIZADAS
+   ================================ */
+.divisoria-superior, .divisoria-inferior {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-gray);
+}
+
+.divisoria-superior {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.divisoria-inferior {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   🔹 Caixa de Anotações
+   ================================ */
+textarea {
+    width: 100%;
+    max-width: calc(100% - 20px);
+    padding: 8px;
+    font-size: calc(var(--tamanho-topico) * 0.9); /* Ajuste de fonte */
+    border: 1px solid var(--text-gray);
+    border-radius: 5px;
+    resize: none;
+    overflow: hidden;
+    margin-top: 10px;
+    display: none;
+    height: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 3px var(--highlight-color);
+    min-height: 1em;  /* Correção do flicker */
+}
+
+textarea.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    height: auto;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 8px var(--highlight-color);
+}
+
+/* ================================
+   🔹 BOTÕES DE NAVEGAÇÃO (PRÓXIMO / ANTERIOR)
+   ================================ */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--highlight-color);
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.nav-btn.anterior {
+    justify-content: flex-start;
+}
+
+.nav-btn.proximo {
+    justify-content: flex-end;
+}
+
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-btn.anterior svg {
+    margin-right: 8px;
+}
+
+.nav-btn.proximo svg {
+    margin-left: 8px;
+}
+
+.nav-btn.desativado {
+    background-color: #999; /* Cinza escuro */
+    cursor: not-allowed;
+    opacity: 0.6;
+    color: white; /* Garante que o texto continue branco */
+}
+
+.nav-btn.desativado svg path {
+    stroke: white !important; /* Agora o chevron fica branco também */
+}
+
+/* ================================
+   🔹 Menu Ocultável
+   ================================ */
+.menu-container {
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-visible {
+    display: flex;
+    opacity: 1;
+    height: auto;
+}
+
+/* ================================
+   🔹 Botão de Limpar Cache
+   ================================ */
+#clear-cache {
+    padding: 8px 12px;
+    border: none;
+    background-color: #c70000;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#clear-cache:hover {
+    background-color: #a00000;
+}
+
+/* Efeito da bolinha verde no horário ativo */
+.schedule li strong.ativo {
+  position: relative;
+}
+.schedule li strong.ativo::before {
+  content: "•";
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.9em;
+  color: var(--highlight-color);
+}
+
+/* Efeito do sublinhado (tracejado) para o item ativo - alterado para usar text-decoration */
+.schedule li.ativo-line > .clickable,
+.schedule li.ativo-line > .topico {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #555;
+  text-underline-offset: 2px; /* ajuste conforme necessário */
+}
+
+.banner-topo {
+    width: 100vw;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}

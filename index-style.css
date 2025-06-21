@@ -1,0 +1,243 @@
+/* 🔥 Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: transparent;
+    font-family: "Noto Sans", sans-serif;
+}
+
+/* 🔥 Camada 1 - Papel de parede */
+.papel-de-parede {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imagens/index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* ☁️ Nuvens */
+#cloud div::before, #cloud div::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://raw.githubusercontent.com/happy358/misc/main/image/cloud_X.png);
+    background-repeat: repeat-x;
+    animation: cloud 10s linear infinite;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+#cloud div::before {
+    animation-delay: 0s;
+    transform: scale3d(1, -1, 1);
+}
+#cloud div::after {
+    animation-delay: -2.5s;
+    transform: scale3d(-1, -1, 1);
+}
+#cloud #cloud_layer2::before {
+    animation-delay: -5s;
+}
+#cloud #cloud_layer2::after {
+    animation-delay: -7.5s;
+}
+
+@keyframes cloud {
+    0% {
+        opacity: 0;
+        background-position: left 300px bottom -50vh;
+        background-size: 50vh 50vh;
+    }
+    5%, 80% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0;
+        background-position: left bottom;
+        background-size: 210vh 70vh;
+    }
+}
+
+/* ☀️ Raios solares */
+#sun div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-origin: 75vw 0;
+    animation: sun 13.5s linear infinite alternate;
+    mask-image: radial-gradient(circle at 75vw 0, transparent 30vh, white 75vh);
+    opacity: 0.3;
+    transform: scaleX(2);
+    pointer-events: none;
+    z-index: 6;
+}
+#sun #sun_layer1 {
+    background: conic-gradient(from 135deg at 75vw 0, transparent 10.5%, khaki 11%, transparent 11.5%, transparent 15%, white 16%, transparent 17%, transparent 18%, white 19%, transparent 20%);
+}
+#sun #sun_layer2 {
+    animation-delay: -1s;
+    animation-duration: 5s;
+    background: conic-gradient(from 140deg at 75vw 0, transparent 10%, white 11%, transparent 12%, transparent 15.5%, paleturquoise 16%, transparent 16.5%, transparent 17%, lightpink 18%, transparent 19%);
+}
+#sun #sun_layer3 {
+    animation-delay: -2s;
+    animation-duration: 6.5s;
+    background: conic-gradient(from 145deg at 75vw 0, transparent 10%, white 11%, transparent 12%, transparent 14%, white 15%, transparent 16%, transparent 17%, powderblue 18%, transparent 19%);
+}
+
+@keyframes sun {
+    to {
+        transform: skew(-15deg);
+    }
+}
+
+/* 🔥 Camada 3 - Partículas */
+
+
+/* 🔥 Camada partículas cintilantes (adaptada perfeitamente) */
+.particulas {
+    position: fixed;
+    bottom: -20vh;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.particulas::before,
+.particulas::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background:
+        radial-gradient(rgba(255, 255, 255, 0.2) 1.5px, transparent 2.5px) 5% 85%,
+        radial-gradient(rgba(255, 255, 255, 0.18) 1.5px, transparent 2.5px) 15% 88%,
+        radial-gradient(rgba(255, 255, 255, 0.2) 1.5px, transparent 2.5px) 25% 90%,
+        radial-gradient(rgba(255, 255, 255, 0.16) 1.5px, transparent 2.5px) 35% 86%,
+        radial-gradient(rgba(255, 255, 255, 0.19) 1.5px, transparent 2.5px) 45% 89%,
+        radial-gradient(rgba(255, 255, 255, 0.2) 2.5px, transparent 3.5px) 10% 65%,
+        radial-gradient(rgba(255, 255, 255, 0.18) 2.5px, transparent 3.5px) 20% 68%,
+        radial-gradient(rgba(255, 255, 255, 0.2) 2.5px, transparent 3.5px) 30% 70%,
+        radial-gradient(rgba(255, 255, 255, 0.16) 2.5px, transparent 3.5px) 40% 66%,
+        radial-gradient(rgba(255, 255, 255, 0.19) 2.5px, transparent 3.5px) 50% 69%,
+        radial-gradient(rgba(255, 255, 255, 0.2) 4px, transparent 5px) 5% 55%,
+        radial-gradient(rgba(255, 255, 255, 0.18) 4px, transparent 5px) 15% 58%,
+        radial-gradient(rgba(255, 255, 255, 0.2) 4px, transparent 5px) 25% 53%,
+        radial-gradient(rgba(255, 255, 255, 0.16) 4px, transparent 5px) 35% 56%,
+        radial-gradient(rgba(255, 255, 255, 0.19) 4px, transparent 5px) 45% 59%;
+    background-size: 400px 400px;
+    animation: flutuar 160s linear infinite,
+               brilho 3s ease-in-out infinite alternate,
+               cintilar 10s ease-in-out infinite alternate;
+    opacity: 0.8;
+    filter: blur(1px);
+}
+
+.particulas::after {
+    animation-duration: 220s, 8s, 10s;
+    animation-direction: reverse, alternate, alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes brilho {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes cintilar {
+    0% {
+        filter: blur(1px) brightness(1);
+    }
+    50% {
+        filter: blur(1px) brightness(2);
+    }
+    100% {
+        filter: blur(1px) brightness(1);
+    }
+}
+
+/* 🔥 Camada 4 - Botões */
+/* 🔥 Container dos Botões */
+.container {
+    position: fixed;
+    top: 50px; /* 🔥 Aqui você controla a descida dos botões */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    padding: 20px;
+    z-index: 20;
+}
+
+/* 🔥 Menu dos Botões */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* 🔥 Espaçamento entre os botões */
+}
+
+/* 🔥 Estilo dos Botões */
+.btn {
+    display: block;
+    width: 550px;
+    text-align: center;
+    padding: 14px;
+    background-color: rgba(34, 54, 34, 0.8); /* 🔥 Verde musgo com opacidade */
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* 🔥 Efeito hover */
+.btn:hover {
+    background-color: rgba(20, 40, 20, 0.9); /* 🔥 Verde musgo mais escuro */
+}
+
+/* 🔥 Responsivo para celulares */
+@media (max-width: 500px) {
+    .btn {
+        width: 120%;
+    }
+    .container {
+        top: 300px; /* 🔥 Ajuste de altura para telas pequenas */
+    }
